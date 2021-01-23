@@ -1,6 +1,6 @@
 {
   "name": "react-before-after",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Before After Component for React",
   "main": "index.js",
   "scripts": {
