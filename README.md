@@ -14,6 +14,10 @@
 
 <br/>
 
+<p align="center">
+    <img src="https://github.com/pouyajabbarisani/react-before-after/blob/master/preview.gif">
+</p>
+
 ### Installation
     npm install --save react-before-after
 Then, import package in the target component of yout react app:
