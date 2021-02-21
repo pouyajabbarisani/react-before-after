@@ -34,8 +34,7 @@ const ReactBeforeAfter = props => {
             setIsMouseDown(true);
             let containerWidth = rbaRef.current.offsetWidth;
             let currentPoint = e.offsetX;
-            let startOfDiv = rbaRef.current.offsetLeft;
-            let modifiedCurrentPoint = currentPoint - startOfDiv;
+            let modifiedCurrentPoint = currentPoint;
             if (modifiedCurrentPoint > 10 && modifiedCurrentPoint < rbaRef.current.offsetWidth - 10) {
                let newWidth = modifiedCurrentPoint * 100 / containerWidth;
                beforeRef.current.setAttribute('style', 'width:' + newWidth + '%;');
@@ -67,8 +66,7 @@ const ReactBeforeAfter = props => {
             if (isMouseDown) {
                let containerWidth = rbaRef.current.offsetWidth;
                let currentPoint = e.offsetX;
-               let startOfDiv = rbaRef.current.offsetLeft;
-               let modifiedCurrentPoint = currentPoint - startOfDiv;
+               let modifiedCurrentPoint = currentPoint;
                if (modifiedCurrentPoint > 10 && modifiedCurrentPoint < rbaRef.current.offsetWidth - 10) {
                   let newWidth = modifiedCurrentPoint * 100 / containerWidth;
                   beforeRef.current.setAttribute('style', 'width:' + newWidth + '%;');
@@ -82,7 +80,6 @@ const ReactBeforeAfter = props => {
    }, [isMouseDown]);
 
    const onImageLoad = (e) => {
-      console.log('load')
       setImageDimention({ width: e.target.naturalWidth, height: e.target.naturalHeight });
    }
 
